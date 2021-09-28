@@ -50,7 +50,8 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
 # ショッピングカートを実装できる
 gem 'acts_as_shopping_cart'
 
-
+# 複数のレコードを一括で登録、更新できる
+gem 'activerecord-import'
 
 
 
