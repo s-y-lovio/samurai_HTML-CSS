@@ -23,7 +23,7 @@
   <div class="d-flex justify-content-between w-75 mt-4">
     <h3>合計<%= @total_count %>件</h3>
 
-    <%= link_to "+ 新規作成", new_dashboard_product_path, class: "btn samazon-submit-button" %>
+    <%= link_to " 新規作成", new_dashboard_product_path, class: "btn samazon-submit-button" %>
   </div>
   <table class="table table-responsive mt-5">
 
@@ -43,7 +43,13 @@
       <% @products.each do |product| %>
       <tr>
         <th scope="row"><%= product.id %></td>
-        <td><%= image_tag "/images/dummy.png", class: "img-fluid h-10" %></td>
+        <td>
+          <% if product.image.attached? %>
+            <%= image_tag product.image, class: "h-10 img-fluid" %>
+          <% else %>
+            <%= image_tag "/images/dummy.png", class: "h-10 img-fluid" %>
+          <% end %>
+        </td>
         <td><%= product.name %></td>
         <td><%= product.price %></td>
         <td><%= product.category.name %></td>
