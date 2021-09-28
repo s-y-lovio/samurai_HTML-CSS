@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   end
 
   namespace :dashboard do
+    resources :major_categories, except: [:new]
     resources :categories, except: [:new]
+    resources :products, except: [:show]
   end
 
   devise_for :users, :controllers => {
