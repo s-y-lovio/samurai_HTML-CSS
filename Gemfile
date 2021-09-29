@@ -53,6 +53,9 @@ gem 'acts_as_shopping_cart'
 # 複数のレコードを一括で登録、更新できる
 gem 'activerecord-import'
 
+# クレジットカード決済機能を導入できる
+gem 'payjp'
+
 
 
 
